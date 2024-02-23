@@ -26,7 +26,7 @@ def load_user(user_id):
     return db.get_or_404(User, user_id)
 
 
-mail = 'devsingh2017dp@gmail.com'
+mail = os.environ.get('myemail')
 passcode = os.environ.get('gm_pass')
 
 
@@ -34,7 +34,7 @@ class Base(DeclarativeBase):
     pass
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///info.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI3", "sqlite:///info.db")
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 
