@@ -1,0 +1,170 @@
+{% include 'header.html' %}
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+      {% with messages = get_flashed_messages() %}
+      {%  if messages %}
+      {% for i in messages %}
+      <p class="flash">{{ i }}</p>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+        <h1 class="fw-light"> Brew & Browse</h1>
+        <p class="lead text-body-secondary">Welcome to Brew & Browse, where your coffee break becomes an opportunity to stay connected! Our unique concept combines the pleasure of enjoying a freshly brewed coffee with seamless access to high-speed WiFi. Whether you're working remotely, catching up on emails, or simply browsing the web, our cafe offers a cozy atmosphere where you can fuel up on caffeine while staying productive. With each purchase of our delicious coffee blends, you unlock complimentary WiFi access for a duration tailored to your caffeine craving. Experience the perfect blend of productivity and relaxation at Brew & Browse – where every sip fuels your connection.</p>
+        <p>
+          <a href="{{ url_for('create') }}" class="btn btn-primary my-2">Create Your Own Coffee</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="img-size-mine" src="../static/img/Macchiato.jpg" alt="Macchiato image">
+            <div class="card-body">
+              <h1 class="name-of-coffee"> Macchiato</h1>
+              <p class="card-text"> A coffee with a small amount of milk, often marked with a dollop of foam, creating a bold and flavorful experience.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class='buy-button' href="{{ url_for('buy') }}">Buy</a>
+                </div>
+                <small class="text-body-secondary">Rs 200</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="img-size-mine" src="../static/img/americano-coffee.jpg" alt="americano-coffee">
+            <div class="card-body">
+              <h1 class="name-of-coffee">Americano</h1>
+              <p class="card-text"> A coffee made by diluting espresso with hot water, resulting in a smooth and milder flavor profile.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class='buy-button' href="{{ url_for('buy') }}">Buy</a>
+                </div>
+                <small class="text-body-secondary">Rs 200</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="img-size-mine" src="../static/img/cafe-mocha.jpg" alt="mocha coffee">
+            <div class="card-body">
+              <h1 class="name-of-coffee">Mocha</h1>
+              <p class="card-text">A decadent coffee drink made with espresso, steamed milk, and chocolate syrup, topped with whipped cream.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class='buy-button' href="{{ url_for('buy') }}">Buy</a>
+                </div>
+                <small class="text-body-secondary">Rs 200</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="img-size-mine" src="../static/img/Cappuccino.jpg" alt="Cappuccino coffee">
+            <div class="card-body">
+              <h1 class="name-of-coffee">Cappuccino</h1>
+              <p class="card-text">A classic Italian coffee made with equal parts espresso, steamed milk, and milk foam, topped with a sprinkle of cocoa powder.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class='buy-button' href="{{ url_for('buy') }}">Buy</a>
+                </div>
+                <small class="text-body-secondary">Rs 200</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="img-size-mine" src="../static/img/Espresso.png" alt="Espresso coffee">
+            <div class="card-body">
+              <h1 class="name-of-coffee">Espresso</h1>
+              <p class="card-text">An intense and robust coffee shot with a bold flavor and luxurious crema, delivering a powerful caffeine kick in every sip.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class='buy-button' href="{{ url_for('buy') }}">Buy</a>
+                </div>
+                <small class="text-body-secondary">Rs 200</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="img-size-mine" src="../static/img/Flat White.jpeg" alt="Flat White coffee">
+            <div class="card-body">
+              <h1 class="name-of-coffee">Flat White</h1>
+              <p class="card-text">A velvety coffee drink made with espresso and velvety steamed milk, characterized by its smooth texture and creamy taste.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class='buy-button' href="{{ url_for('buy') }}">Buy</a>
+                </div>
+                <small class="text-body-secondary">Rs 200</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="img-size-mine" src="../static/img/Latte2.jpg" alt="Latte coffee">
+            <div class="card-body">
+              <h1 class="name-of-coffee">Latte</h1>
+              <p class="card-text"> A creamy and indulgent coffee beverage, crafted with velvety steamed milk, creating a smooth and comforting experience with each sip.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class='buy-button' href="{{ url_for('buy') }}">Buy</a>
+                </div>
+                <small class="text-body-secondary">Rs 200</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="img-size-mine" src="../static/img/Affogato.jpg" alt="Affogato coffee">
+            <div class="card-body">
+              <h1 class="name-of-coffee">Affogato</h1>
+              <p class="card-text">A delightful dessert coffee made by pouring a shot of hot espresso over a scoop of vanilla ice cream, creating a perfect blend of hot and cold flavors.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class='buy-button' href="{{ url_for('buy') }}">Buy</a>
+                </div>
+                <small class="text-body-secondary">Rs 200</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="img-size-mine" src="../static/img/Turkish Coffee.avif" alt="Turkish Coffee">
+            <div class="card-body">
+              <h1 class="name-of-coffee">Turkish</h1>
+              <p class="card-text">A traditional coffee brewing method where finely ground coffee is simmered with water and sugar in a special pot, resulting in a strong and aromatic brew served unfiltered.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class='buy-button' href="{{ url_for('buy') }}">Buy</a>
+                </div>
+                <small class="text-body-secondary">Rs 200</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% extends 'footer.html' %}

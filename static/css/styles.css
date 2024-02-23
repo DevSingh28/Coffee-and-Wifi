@@ -1,0 +1,38 @@
+.img-size-mine {
+    height: 248px;
+}
+
+.buy-button{
+  text-decoration: none;
+  color: black;
+}
+
+.buy-button:hover{
+  color: red;
+}
+
+.flash{
+    color: red;
+}
+
+.my_button {
+    display: flex;
+    justify-content: center;
+    align-item: center;
+    margin-top: 20px;
+}
+
+.flash2 {
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+
+.flash3 {
+    color: blue;
+    text-align: center;
+}
+
+.flash3:hover{
+    color: red;
+}

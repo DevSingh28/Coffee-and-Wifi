@@ -1,0 +1,102 @@
+{% include 'header.html' %}
+<div class="container">
+  <div id="carouselExampleInterval" class="carousel slide" style="margin-top: 20px;" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="../static/img/nathan-dumlao-KixfBEdyp64-unsplash.jpg" class="img-fluid d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="../static/img/nathan-dumlao-6VhPY27jdps-unsplash.jpg" class="img-fluid d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../static/img/jakub-dziubak-XtUd5SiX464-unsplash.jpg" class="img-fluid d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal text-body-emphasis">Pricing</h1>
+      <p class="fs-5 text-body-secondary">Select Your Coffee Size</p>
+    </div>
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Small</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">100 Rs<small class="text-body-secondary fw-light"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Wifi Included</li>
+              <li>Speed: 10Mbps</li>
+              <li>Time: 30 Min</li>
+            </ul>
+            <form action="{{ url_for('buyer') }}" method="post">
+            {% if not current_user.is_authenticated %}
+              <button type="reset" class="w-100 btn btn-lg btn-outline-primary" data-bs-toggle="popover" data-bs-title="Login Required" data-bs-content="Login or Register to order coffee online.">Buy 😁</button>
+            {% else %}
+              <button type="submit" class="w-100 btn btn-lg btn-outline-primary">Buy 😃</button>
+            {% endif %}
+            </form>
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Medium</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">200 Rs<small class="text-body-secondary fw-light"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Wifi Included</li>
+              <li>Speed: 50Mbps</li>
+              <li>Time: 60 Min</li>
+            </ul>
+            <form action="{{ url_for('buyer') }}" method="post">
+            {% if not current_user.is_authenticated %}
+              <button type="reset" class="w-100 btn btn-lg btn-primary" data-bs-toggle="popover" data-bs-title="Login Required" data-bs-content="Login or Register to order coffee online.">Buy 😁</button>
+            {% else %}
+              <button type="submit" class="w-100 btn btn-lg btn-primary">Buy 😄</button>
+            {% endif %}
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Big</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">250 Rs<small class="text-body-secondary fw-light"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Wifi Included</li>
+              <li>Speed: 100Mbps</li>
+              <li>Time: 90 Min</li>
+            </ul>
+            <form action="{{ url_for('buyer') }}" method="post">
+            {% if not current_user.is_authenticated %}
+              <button type="reset" class="w-100 btn btn-lg btn-primary" data-bs-toggle="popover" data-bs-title="Login Required" data-bs-content="Login or Register to order coffee online.">Buy 😁</button>
+            {% else %}
+              <button type="submit" class="w-100 btn btn-lg btn-primary">Buy 😁</button>
+            {% endif %}
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+<script>
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
+{% include 'footer.html' %}
