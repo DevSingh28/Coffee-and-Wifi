@@ -27,7 +27,7 @@
       <p class="fs-5 text-body-secondary">Select Your Coffee Size</p>
     </div>
 <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-      <div class="col">
+      <div class="col col-sm-12 col-md-12 col-lg-4">
         <div class="card mb-4 rounded-3 shadow-sm">
           <div class="card-header py-3">
             <h4 class="my-0 fw-normal">Small</h4>
@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col col-sm-12 col-md-12 col-lg-4">
         <div class="card mb-4 rounded-3 shadow-sm">
           <div class="card-header py-3">
             <h4 class="my-0 fw-normal">Medium</h4>
@@ -64,15 +64,15 @@
             </ul>
             <form action="{{ url_for('buyer') }}" method="post">
             {% if not current_user.is_authenticated %}
-              <button type="reset" class="w-100 btn btn-lg btn-primary" data-bs-toggle="popover" data-bs-title="Login Required" data-bs-content="Login or Register to order coffee online.">Buy 😁</button>
+              <button type="reset" class="w-100 btn btn-lg btn-outline-primary" data-bs-toggle="popover" data-bs-title="Login Required" data-bs-content="Login or Register to order coffee online.">Buy 😁</button>
             {% else %}
-              <button type="submit" class="w-100 btn btn-lg btn-primary">Buy 😄</button>
+              <button type="submit" class="w-100 btn btn-lg btn-outline-primary">Buy 😄</button>
             {% endif %}
             </form>
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col col-sm-12 col-md-12 col-lg-4">
         <div class="card mb-4 rounded-3 shadow-sm border-primary">
           <div class="card-header py-3 text-bg-primary border-primary">
             <h4 class="my-0 fw-normal">Big</h4>
@@ -86,9 +86,9 @@
             </ul>
             <form action="{{ url_for('buyer') }}" method="post">
             {% if not current_user.is_authenticated %}
-              <button type="reset" class="w-100 btn btn-lg btn-primary" data-bs-toggle="popover" data-bs-title="Login Required" data-bs-content="Login or Register to order coffee online.">Buy 😁</button>
+              <button type="reset" class="w-100 btn btn-lg btn-outline-primary" data-bs-toggle="popover" data-bs-title="Login Required" data-bs-content="Login or Register to order coffee online.">Buy 😁</button>
             {% else %}
-              <button type="submit" class="w-100 btn btn-lg btn-primary">Buy 😁</button>
+              <button type="submit" class="w-100 btn btn-lg btn-outline-primary">Buy 😁</button>
             {% endif %}
             </form>
           </div>
